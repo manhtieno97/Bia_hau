@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f3d0066-fb9b-4ea1-9e61-87365345bb7d" name="Default Changelist" comment="" />
+    <list default="true" id="1f3d0066-fb9b-4ea1-9e61-87365345bb7d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/PageTemplates.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bia_hau.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bia_hau.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/backpack/base.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/backpack/base.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/backpack/base/inc/sidebar_content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/backpack/base/inc/sidebar_content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/backpack/custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/backpack/custom.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -122,6 +139,23 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/eduardoarandah/usermanager" />
+      <path value="$PROJECT_DIR$/vendor/backpack/permissionmanager" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/cviebrock/eloquent-sluggable" />
+      <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
+      <path value="$PROJECT_DIR$/vendor/backpack/newscrud" />
+      <path value="$PROJECT_DIR$/vendor/studio-42/elfinder" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-cached-adapter" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/elfinder-flysystem-driver" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-elfinder" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/backpack/filemanager" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/backpack/logmanager" />
+      <path value="$PROJECT_DIR$/vendor/backpack/settings" />
+      <path value="$PROJECT_DIR$/vendor/backpack/pagemanager" />
+      <path value="$PROJECT_DIR$/vendor/backpack/generators" />
     </include_path>
   </component>
   <component name="ProjectId" id="1imhwdZvTsA76xPsDWH1Kz7cOGq" />
@@ -150,11 +184,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602518914350</updated>
-      <workItem from="1602518915423" duration="1096000" />
+      <workItem from="1602518915423" duration="1529000" />
+      <workItem from="1602520462861" duration="3897000" />
+      <workItem from="1602550885030" duration="189000" />
+      <workItem from="1602691461892" duration="1042000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="446" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602523500400">
+      <screen x="60" y="27" width="1306" height="741" />
+    </state>
+    <state x="446" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/60.27.1306.741@60.27.1306.741" timestamp="1602523500400" />
+    <state x="496" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602551071280">
+      <screen x="60" y="27" width="1306" height="741" />
+    </state>
+    <state x="496" y="155" width="424" height="491" key="FileChooserDialogImpl/60.27.1306.741@60.27.1306.741" timestamp="1602551071280" />
+    <state x="327" y="89" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602520555298">
+      <screen x="60" y="27" width="1306" height="741" />
+    </state>
+    <state x="327" y="89" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/60.27.1306.741@60.27.1306.741" timestamp="1602520555298" />
   </component>
 </project>
