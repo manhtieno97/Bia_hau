@@ -11,6 +11,7 @@
 {{--    <link rel="icon" type="image/x-icon" href="{{ url('/frontend') }}/assets/images/icons/favicon.ico">--}}
     <link rel="stylesheet" href="{{ url('/frontend') }}/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    @yield('css')
 </head>
 <body>
 <div class="container mx-auto">
