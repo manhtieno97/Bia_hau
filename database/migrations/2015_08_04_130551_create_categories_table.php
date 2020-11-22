@@ -19,6 +19,8 @@ class CreateCategoriesTable extends Migration
             $table->integer('rgt')->unsigned()->nullable();
             $table->integer('depth')->unsigned()->nullable();
             $table->string('name');
+            $table->text('content')->nullable();
+            $table->string('color')->default('bg-orange-500');
             $table->timestamps();
             $table->softDeletes();
         });

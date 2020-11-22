@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\ArticleRequest;
+use App\Http\Requests\ProductRequest;
 use App\Models\Article;
+use App\Models\Product;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class ArticleCrudController
+ * Class ProductCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class ArticleCrudController extends CrudController
+class ProductCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -28,9 +29,9 @@ class ArticleCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\Article::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/article');
-        CRUD::setEntityNameStrings('article', 'Bài viết');
+        CRUD::setModel(\App\Models\Product::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/product');
+        CRUD::setEntityNameStrings('product', 'Sản phẩm');
         $this->crud->operation('list', function () {
             $this->crud->addColumn([
                 'name' => 'title',
@@ -44,8 +45,8 @@ class ArticleCrudController extends CrudController
                 // image from a different disk (like s3 bucket)
                 // 'disk'   => 'disk-name',
                 // optional width/height if 25px is not ok with you
-                'height' => '50px',
-                'width'  => '50px',
+                'height' => '40px',
+                'width'  => '40px',
             ]);
             $this->crud->addColumn([
                 'name' => 'date',
@@ -56,13 +57,13 @@ class ArticleCrudController extends CrudController
                 'name'    => 'status',
                 'label'   => 'Trạng thái',
                 'type'    => 'radio',
-                'options' =>  Article::getStatuses(), // optional
+                'options' =>  Product::getStatuses(), // optional
                 'wrapper' => [
                     'element' => 'span',
                     'class' => function ($crud, $column, $entry, $related_key) {
-                        if ($column['text'] == Article::getStatuses()[Article::STATUS_HIDDEN]) {
+                        if ($column['text'] == Product::getStatuses()[Product::STATUS_HIDDEN]) {
                             return 'badge badge-danger';
-                        }elseif ($column['text'] == Article::getStatuses()[Article::STATUS_SHOW]){
+                        }elseif ($column['text'] == Product::getStatuses()[Product::STATUS_SHOW]){
                             return 'badge badge-success';
                         }else{
                             return 'badge badge-default';
@@ -125,7 +126,7 @@ class ArticleCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->operation(['create', 'update'], function () {
-            $this->crud->setValidation(\App\Http\Requests\ArticleRequest::class);
+            $this->crud->setValidation(\App\Http\Requests\ProductRequest::class);
 
             $this->crud->addField([
                 'name' => 'title',
@@ -158,6 +159,8 @@ class ArticleCrudController extends CrudController
                 'type' => 'image',
                 'crop' => true, // set to true to allow cropping, false to disable
                 'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
+                // 'disk'      => 's3_bucket', // in case you need to show images from a different disk
+                // 'prefix'    => 'uploads/images/profile_pictures/' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
             ]);
             $this->crud->addField([
                 'label' => 'Danh mục',
@@ -187,9 +190,9 @@ class ArticleCrudController extends CrudController
                     0 => "Hiển thị",
                     1 => "Ẩn"
                 ],
-                'default'=>0,
+                'value' => 0,
                 // optional
-                //'inline'      => false, // show the radios all on the same line?
+                'inline'      => true, // show the radios all on the same line?
             ]);
             $this->crud->addField([
                 'name' => 'featured',

@@ -2,14 +2,14 @@
 
 namespace App\Models;
 
-
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Intervention\Image\ImageManagerStatic as Image;
-class Article extends Model
+
+class Product extends Model
 {
     use CrudTrait;
     use Sluggable, SluggableScopeHelpers;
@@ -22,7 +22,7 @@ class Article extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'articles';
+    protected $table = 'products';
     protected $primaryKey = 'id';
     public $timestamps = true;
     // protected $guarded = ['id'];
@@ -72,7 +72,7 @@ class Article extends Model
 
     public function tags()
     {
-        return $this->belongsToMany('App\Models\Tag', 'article_tag');
+        return $this->belongsToMany('App\Models\Tag', 'product_tag');
     }
 
     /*
@@ -115,7 +115,7 @@ class Article extends Model
         // or use your own disk, defined in config/filesystems.php
         $disk = config('backpack.base.root_disk_name');
         // destination path relative to the disk above
-        $destination_path = "public/storage/image/article";
+        $destination_path = "public/storage/image/products";
 
         // if the image was erased
         if ($value==null) {

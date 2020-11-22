@@ -23,5 +23,8 @@ class DatabaseSeeder extends Seeder
             ->assignRole('admin');
         User::create(['name' => 'client', 'email' => 'client@gmail.com', 'password' => bcrypt('password')])
             ->assignRole('client');
+        $this->call([
+            CategorySeerder::class,
+        ]);
     }
 }

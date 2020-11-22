@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use App\Http\Requests\Request;
 use Illuminate\Foundation\Http\FormRequest;
 
-class TagRequest extends FormRequest
+class ProductRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,12 @@ class TagRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:2|max:255',
+            'title' => 'required|min:2|max:255',
+            'slug' => 'unique:articles,slug,'.\Request::get('id'),
+            'content' => 'required|min:2',
+            'date' => 'required|date',
+            'status' => 'required',
+            'category_id' => 'required',
         ];
     }
 

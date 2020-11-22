@@ -28,8 +28,10 @@ class TagCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Tag::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/tag');
-        CRUD::setEntityNameStrings('tag', 'tags');
-
+        CRUD::setEntityNameStrings('tag', 'Thẻ');
+        CRUD::operation('list', function() {
+            CRUD::removeButton('show');
+        });
     }
 
     /**
@@ -40,8 +42,17 @@ class TagCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::setFromDb(); // columns
-
+        //CRUD::setFromDb(); // columns
+        $this->crud->addColumn([
+            'name' => 'name',
+            'type' => 'text',
+            'label' => 'Tên thẻ'
+        ]);
+        $this->crud->addColumn([
+            'name' => 'slug',
+            'type' => 'text',
+            'label' => 'Đường dẫn thẻ'
+        ]);
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -59,8 +70,19 @@ class TagCrudController extends CrudController
     {
         CRUD::setValidation(TagRequest::class);
 
-        CRUD::setFromDb(); // fields
+        //CRUD::setFromDb(); // fields
+        $this->crud->addFields([
+            [
+                'name'  => 'name',
+                'label' => trans('Tên thẻ'),
+                'type'  => 'text',
+            ],[
+                'name'  => 'slug',
+                'label' => trans('Đường dẫn thẻ'),
+                'type'  => 'text',
+            ],
 
+        ]);
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');
